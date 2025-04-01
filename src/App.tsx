@@ -13,7 +13,7 @@ function HomePage() {
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <User className="w-8 h-8 text-accent" />
-            <span className="text-xl font-semibold text-white">Nutricionista</span>
+            <span className="text-xl font-semibold text-white">Dr. Gustavo Carvalho</span>
           </div>
           <div className="flex items-center gap-6">
             <a href="#sobre" className="text-white hover:text-accent transition-colors">Sobre</a>
@@ -220,6 +220,18 @@ function HomePage() {
             <h3 className="text-xl font-semibold text-center text-[#08027F]">
               <b>-6kg de massa gorda</b> e mantendo a massa muscular em apenas <b>2 meses de acompanhamento</b>
             </h3>
+            <div className="flex justify-center my-2">
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors border-2 border-accent"
+              >
+                <span>Agende sua consulta</span>
+              </a>
+            </div>
+
+
           </section>
         </div>
       </section>
