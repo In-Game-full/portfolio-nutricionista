@@ -84,7 +84,7 @@ export function AvaliacaoForm() {
     <div className="min-h-screen bg-white py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8 border-2 border-accent">
-          <h2 className="text-2xl font-bold text-primary mb-6">Avaliação Inicial</h2>
+          <h2 className="text-2xl font-bold text-primary mb-6">Pré-Consulta</h2>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -125,6 +125,17 @@ export function AvaliacaoForm() {
                   <input
                     type="radio"
                     name="objetivo_principal"
+                    value="Mais Qualidade de Vida"
+                    checked={formData.objetivo_principal === 'Mais Qualidade de Vida'}
+                    onChange={handleChange}
+                    className="mr-2 accent-primary"
+                  />
+                  <span className="text-primary">Mais Qualidade de Vida</span>
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="objetivo_principal"
                     value="Emagrecimento"
                     checked={formData.objetivo_principal === 'Emagrecimento'}
                     onChange={handleChange}
@@ -144,6 +155,7 @@ export function AvaliacaoForm() {
                   />
                   <span className="text-primary">Ganho de Massa</span>
                 </label>
+                
               </div>
             </div>
 

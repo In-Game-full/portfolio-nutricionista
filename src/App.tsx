@@ -32,29 +32,29 @@ function HomePage() {
           </h1>
           <p className="text-lg text-gray-600 mb-8">
             Meu nome é <b>Gustavo Carvalho</b>.
-Sou nutricionista especializado
-no emagrecimento saudável, sou
-apaixonado por ajudar as
-pessoas a alcançarem os seus
-objetivos de saúde e estéticos.
+            Sou nutricionista especializado
+            no emagrecimento saudável, sou
+            apaixonado por ajudar as
+            pessoas a alcançarem os seus
+            objetivos de saúde e estéticos.
           </p>
           <p className="text-lg text-gray-600 mb-8">
             Meu foco é estar junto com você no
-acompanhamento nutricional para
-alavancar seus resultados com
-alimentos que já fazem parte da
-sua rotina e refeições específicas
-do seu cotidiano. Irei mudar
-detalhes que farão toda diferença.
+            acompanhamento nutricional para
+            alavancar seus resultados com
+            alimentos que já fazem parte da
+            sua rotina e refeições específicas
+            do seu cotidiano. Irei mudar
+            detalhes que farão toda diferença.
           </p>
           <p className="text-lg text-gray-600 mb-8">
-          Minha missão é te ajudar a
-transformar sua vida através de
-uma abordagem personalizada
-para você com uma alimentação
-saudável, potencializando sua
-saúde, e melhorando sua
-disposição física.
+            Minha missão é te ajudar a
+            transformar sua vida através de
+            uma abordagem personalizada
+            para você com uma alimentação
+            saudável, potencializando sua
+            saúde, e melhorando sua
+            disposição física.
           </p>
           <div className="flex gap-4">
             <a
@@ -92,7 +92,7 @@ disposição física.
         <div className="container mx-auto px-4">
           <div className="bg-[#ECE7E3] border-2 border-[#FDAF01] rounded-lg p-8 mb-12">
             <h2 className="text-3xl font-bold text-center text-primary mb-4">Meu Acompanhamento Nutricional</h2>
-            <p className="text-lg text-gray-600 text-center"> 
+            <p className="text-lg text-gray-600 text-center">
               Acredito que cada pessoa é única com suas preferências alimentares e especificações culinárias.
             </p>
           </div>
@@ -142,21 +142,22 @@ disposição física.
           {/* Results Section */}
           <section className="mt-16 bg-[#FEB206] py-12 rounded-lg">
             <div className="bg-[#FEB206] rounded-lg p-8 mb-12">
-              <h1 className="text-4xl font-bold text-center text-[#08027F] mb-4">RESULTADOS</h1>
-              <div className="bg-[#08027F] rounded-lg p-4">
+              <h1 className="text-8xl font-bold text-center text-[#08027F] mb-4">RESULTADOS</h1>
+              <div className="bg-[#08027F] rounded-lg p-4 max-w-xs mx-auto">
                 <p className="text-lg text-center text-white font-semibold">
                   GANHO DE MASSA MUSCULAR
                 </p>
               </div>
+
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Before */}
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-center text-white bg-[#08027F] py-2 rounded-lg">ANTES</h2>
-                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+              <div className="space-y-0 mx-4">
+                <h2 className="text-3xl font-bold text-center text-white py-2 rounded-lg">ANTES</h2>
+                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden mx-4">
                   <img
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=500&auto=format&fit=crop"
+                    src="/ganho-massa-antes.png"
                     alt="Antes"
                     className="w-full h-full object-cover"
                   />
@@ -164,11 +165,11 @@ disposição física.
               </div>
 
               {/* After */}
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-center text-white bg-[#08027F] py-2 rounded-lg">DEPOIS</h2>
-                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+              <div className="space-y-0 mx-4">
+                <h2 className="text-3xl font-bold text-center text-white py-2 rounded-lg">DEPOIS</h2>
+                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden mx-4">
                   <img
-                    src="https://images.unsplash.com/photo-1571019613576-2b22c76fd955?q=80&w=500&auto=format&fit=crop"
+                    src="/ganho-massa-depois.png"
                     alt="Depois"
                     className="w-full h-full object-cover"
                   />
@@ -180,7 +181,7 @@ disposição física.
               <b>+4kg de massa muscular</b> em apenas <b>2 meses</b> de acompanhamento
             </h3>
 
-            <div className="bg-[#08027F] rounded-lg p-4 mb-12">
+            <div className="bg-[#08027F] rounded-lg p-4 max-w-xs mx-auto mb-12">
               <p className="text-lg text-center text-white font-semibold">
                 EMAGRECIMENTO
               </p>
@@ -188,11 +189,13 @@ disposição física.
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               {/* Before */}
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-center text-white bg-[#08027F] py-2 rounded-lg">ANTES</h2>
-                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+              <div className="space-y-0 mx-4">
+                <h2 className="text-3xl font-bold text-center text-white  py-2 rounded-lg">
+                  ANTES
+                </h2>
+                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden mx-4">
                   <img
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=500&auto=format&fit=crop"
+                    src="emagrecimento-antes.png"
                     alt="Antes"
                     className="w-full h-full object-cover"
                   />
@@ -200,11 +203,13 @@ disposição física.
               </div>
 
               {/* After */}
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-center text-white bg-[#08027F] py-2 rounded-lg">DEPOIS</h2>
-                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+              <div className="space-y-0 mx-4">
+                <h2 className="text-3xl font-bold text-center text-white  py-2 rounded-lg">
+                  DEPOIS
+                </h2>
+                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden mx-4">
                   <img
-                    src="https://images.unsplash.com/photo-1571019613576-2b22c76fd955?q=80&w=500&auto=format&fit=crop"
+                    src="/emagrecimento-depois.png"
                     alt="Depois"
                     className="w-full h-full object-cover"
                   />
@@ -213,7 +218,7 @@ disposição física.
             </div>
 
             <h3 className="text-xl font-semibold text-center text-[#08027F]">
-              <b>-6kg de massa gorda</b> e mantendo a massa muscular e apenas <b>2 meses de acompanhamento</b>
+              <b>-6kg de massa gorda</b> e mantendo a massa muscular em apenas <b>2 meses de acompanhamento</b>
             </h3>
           </section>
         </div>
