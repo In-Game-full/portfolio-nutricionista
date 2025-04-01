@@ -142,7 +142,7 @@ function HomePage() {
           {/* Results Section */}
           <section className="mt-16 bg-[#FEB206] py-12 rounded-lg">
             <div className="bg-[#FEB206] rounded-lg p-8 mb-12">
-              <h1 className="text-8xl font-bold text-center text-[#08027F] mb-4">RESULTADOS</h1>
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center text-[#08027F] mb-4">RESULTADOS</h1>
               <div className="bg-[#08027F] rounded-lg p-4 max-w-xs mx-auto">
                 <p className="text-lg text-center text-white font-semibold">
                   GANHO DE MASSA MUSCULAR
