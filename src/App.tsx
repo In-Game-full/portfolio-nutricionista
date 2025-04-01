@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Menu, Phone, User, ChevronRight, Instagram, Mail } from 'lucide-react';
+import { Menu, Phone, User, ChevronRight, Instagram, Mail, Clock, Scale, Utensils, Star, Crown } from 'lucide-react';
 import { AvaliacaoForm } from './components/AvaliacaoForm';
 
 function HomePage() {
@@ -13,7 +13,7 @@ function HomePage() {
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <User className="w-8 h-8 text-accent" />
-            <span className="text-xl font-semibold text-white">Dr. Gustavo Carvalho</span>
+            <span className="text-xl font-semibold text-white">Nutricionista</span>
           </div>
           <div className="flex items-center gap-6">
             <a href="#sobre" className="text-white hover:text-accent transition-colors">Sobre</a>
@@ -38,6 +38,24 @@ apaixonado por ajudar as
 pessoas a alcançarem os seus
 objetivos de saúde e estéticos.
           </p>
+          <p className="text-lg text-gray-600 mb-8">
+            Meu foco é estar junto com você no
+acompanhamento nutricional para
+alavancar seus resultados com
+alimentos que já fazem parte da
+sua rotina e refeições específicas
+do seu cotidiano. Irei mudar
+detalhes que farão toda diferença.
+          </p>
+          <p className="text-lg text-gray-600 mb-8">
+          Minha missão é te ajudar a
+transformar sua vida através de
+uma abordagem personalizada
+para você com uma alimentação
+saudável, potencializando sua
+saúde, e melhorando sua
+disposição física.
+          </p>
           <div className="flex gap-4">
             <a
               href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
@@ -53,7 +71,7 @@ objetivos de saúde e estéticos.
               className="bg-white text-primary border-2 border-accent px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-gray-50 transition-colors"
             >
               <ChevronRight className="w-5 h-5" />
-              Avaliação Inicial
+              Pré-Consulta
             </a>
           </div>
         </div>
@@ -72,27 +90,132 @@ objetivos de saúde e estéticos.
 
       <section id="servicos" className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-primary mb-12">Acompanhamento Nutricional</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg border-2 border-accent shadow-lg">
-              <h3 className="text-xl font-semibold text-primary mb-4">Mais Qualidade de Vida</h3>
-              <p className="text-gray-600">
-               Analisando seus exames, você terá um plano alimentar com lista de refeições substitutas e acompanhamento vip pós consulta focando em melhorar suas saúde psicológica, cardiovascular e física.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg border-2 border-accent shadow-lg">
-              <h3 className="text-xl font-semibold text-primary mb-4">Ganho de Massa Muscular</h3>
-              <p className="text-gray-600">
-                Estratégias nutricionais que farão você ganhar massa muscular e melhorar seu desempenho físico através de alimentação e suplementação especifica.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg border-2 border-accent shadow-lg">
-              <h3 className="text-xl font-semibold text-primary mb-4">Emagrecimento</h3>
-              <p className="text-gray-600">
-               Plano personalizado de acordo com sua rotina e preferências alimentares, ajustando detalhes que fazem toda diferença além do acompanhamento vip pós consulta para tirar todas as dúvidas e lista de refeições substitutas.
-              </p>
-            </div>
+          <div className="bg-[#ECE7E3] border-2 border-[#FDAF01] rounded-lg p-8 mb-12">
+            <h2 className="text-3xl font-bold text-center text-primary mb-4">Meu Acompanhamento Nutricional</h2>
+            <p className="text-lg text-gray-600 text-center"> 
+              Acredito que cada pessoa é única com suas preferências alimentares e especificações culinárias.
+            </p>
           </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="bg-[#08027F] rounded-lg p-6 flex items-start gap-4">
+              <Clock className="w-8 h-8 text-[#FDAF01] flex-shrink-0" />
+              <p className="text-white">Consulta com duração de 01:00h a 01:30h</p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-[#08027F] rounded-lg p-6 flex items-start gap-4">
+              <Scale className="w-8 h-8 text-[#FDAF01] flex-shrink-0" />
+              <p className="text-white">Avaliação física com adipômetro, fita métrica e bioimpedância</p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-[#08027F] rounded-lg p-6 flex items-start gap-4">
+              <Utensils className="w-8 h-8 text-[#FDAF01] flex-shrink-0" />
+              <p className="text-white">Dieta individualizada</p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-[#08027F] rounded-lg p-6 flex items-start gap-4">
+              <Crown className="w-8 h-8 text-[#FDAF01] flex-shrink-0" />
+              <p className="text-white">Acompanhamento vip pós consulta</p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="bg-[#08027F] rounded-lg p-6 flex items-start gap-4">
+              <Star className="w-8 h-8 text-[#FDAF01] flex-shrink-0" />
+              <p className="text-white">Retorno com avaliação física</p>
+            </div>
+
+            {/* Card 6 - Button */}
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#08027F] rounded-lg p-6 flex items-center justify-center hover:bg-opacity-90 transition-colors"
+            >
+              <span className="text-[#FDAF01] font-bold text-lg">AGENDAR CONSULTA</span>
+            </a>
+          </div>
+
+          {/* Results Section */}
+          <section className="mt-16 bg-[#FEB206] py-12 rounded-lg">
+            <div className="bg-[#FEB206] rounded-lg p-8 mb-12">
+              <h1 className="text-4xl font-bold text-center text-[#08027F] mb-4">RESULTADOS</h1>
+              <div className="bg-[#08027F] rounded-lg p-4">
+                <p className="text-lg text-center text-white font-semibold">
+                  GANHO DE MASSA MUSCULAR
+                </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {/* Before */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-center text-white bg-[#08027F] py-2 rounded-lg">ANTES</h2>
+                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=500&auto=format&fit=crop"
+                    alt="Antes"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* After */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-center text-white bg-[#08027F] py-2 rounded-lg">DEPOIS</h2>
+                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1571019613576-2b22c76fd955?q=80&w=500&auto=format&fit=crop"
+                    alt="Depois"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-semibold text-center text-[#08027F] mb-12">
+              <b>+4kg de massa muscular</b> em apenas <b>2 meses</b> de acompanhamento
+            </h3>
+
+            <div className="bg-[#08027F] rounded-lg p-4 mb-12">
+              <p className="text-lg text-center text-white font-semibold">
+                EMAGRECIMENTO
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {/* Before */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-center text-white bg-[#08027F] py-2 rounded-lg">ANTES</h2>
+                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=500&auto=format&fit=crop"
+                    alt="Antes"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* After */}
+              <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-center text-white bg-[#08027F] py-2 rounded-lg">DEPOIS</h2>
+                <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1571019613576-2b22c76fd955?q=80&w=500&auto=format&fit=crop"
+                    alt="Depois"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-semibold text-center text-[#08027F]">
+              <b>-6kg de massa gorda</b> e mantendo a massa muscular e apenas <b>2 meses de acompanhamento</b>
+            </h3>
+          </section>
         </div>
       </section>
 
