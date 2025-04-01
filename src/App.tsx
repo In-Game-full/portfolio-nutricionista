@@ -75,11 +75,11 @@ function HomePage() {
             </a>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 flex justify-end">
           <img
             src="/dr-gustavo-carvalho.png"
             alt="Dr. Gustavo Carvalho - Nutricionista"
-            className="rounded-lg shadow-lg w-full border-4 border-accent"
+            className="rounded-lg shadow-lg max-w-[450px] border-4 border-accent"
             onError={(e) => {
               console.error('Error loading image:', e);
               e.currentTarget.style.display = 'none';
