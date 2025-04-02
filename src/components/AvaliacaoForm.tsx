@@ -32,6 +32,26 @@ export function AvaliacaoForm() {
     return numbers.slice(0, 11);
   };
 
+  const sendWhatsAppMessage = (data: typeof formData) => {
+    const nutritionistNumber = "559591199821"; // Número do nutricionista
+    
+    const message = `
+*Nova Avaliação Recebida*
+
+*Nome:* ${data.nome}
+*WhatsApp:* ${data.whatsapp}
+*Objetivo Principal:* ${data.objetivo_principal}
+*Condição Saúde:* ${data.possui_doenca}
+*Histórico Familiar:* ${data.historico_familiar}
+*Usa Medicamento:* ${data.usa_medicamento}
+*Alergia/Intolerância:* ${data.alergia_intolerancia_alimentar}
+*Dificuldade para Objetivo:* ${data.dificuldade_objetivo}
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/${nutritionistNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -53,6 +73,9 @@ export function AvaliacaoForm() {
         }]);
 
       if (error) throw error;
+
+      // Enviar mensagem para o WhatsApp do nutricionista
+      sendWhatsAppMessage(formData);
 
       alert('Avaliação enviada com sucesso!');
       navigate('/');
@@ -161,7 +184,7 @@ export function AvaliacaoForm() {
 
             <div>
               <label className="block text-primary font-medium mb-2">
-                Tem alguma doença?*
+              Você tem alguma condição de saúde que gostaria de compartilhar?*
               </label>
               <textarea
                 name="possui_doenca"
