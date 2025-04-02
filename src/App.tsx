@@ -1,25 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Menu, Phone, User, ChevronRight, Instagram, Mail, Clock, Scale, Utensils, Star, Crown } from 'lucide-react';
+import { Menu, Phone, User, ChevronRight, Instagram, Mail, Clock, Scale, Utensils, Star, Crown, X } from 'lucide-react';
 import { AvaliacaoForm } from './components/AvaliacaoForm';
 
 function HomePage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const whatsappNumber = "559591199821";
   const whatsappMessage = encodeURIComponent("Olá! Gostaria de agendar uma consulta.");
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-white">
       <header className="fixed top-0 left-0 right-0 bg-primary shadow-md z-50">
-        <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <User className="w-8 h-8 text-accent" />
-            <span className="text-xl font-semibold text-white">Dr. Gustavo Carvalho</span>
+        <nav className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <User className="w-8 h-8 text-accent" />
+              <span className="text-xl font-semibold text-white">Nutricionista</span>
+            </div>
+            
+            {/* Mobile menu button */}
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-white hover:text-accent transition-colors"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+
+            {/* Desktop menu */}
+            <div className="hidden md:flex items-center gap-6">
+              <a href="#sobre" className="text-white hover:text-accent transition-colors">Sobre</a>
+              <a href="#servicos" className="text-white hover:text-accent transition-colors">Serviços</a>
+              <a href="#contato" className="text-white hover:text-accent transition-colors">Contato</a>
+            </div>
           </div>
-          <div className="flex items-center gap-6">
-            <a href="#sobre" className="text-white hover:text-accent transition-colors">Sobre</a>
-            <a href="#servicos" className="text-white hover:text-accent transition-colors">Serviços</a>
-            <a href="#contato" className="text-white hover:text-accent transition-colors">Contato</a>
-          </div>
+
+          {/* Mobile menu */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-4">
+              <a 
+                href="#sobre" 
+                className="block text-white hover:text-accent transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Sobre
+              </a>
+              <a 
+                href="#servicos" 
+                className="block text-white hover:text-accent transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Serviços
+              </a>
+              <a 
+                href="#contato" 
+                className="block text-white hover:text-accent transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contato
+              </a>
+            </div>
+          )}
         </nav>
       </header>
 
